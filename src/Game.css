@@ -1,66 +1,137 @@
-.game-container {
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #1e1f26; /* Deep dark blue */
+  color: #f8f9fa;
   text-align: center;
-  font-family: Arial, sans-serif;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
 }
 
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #4a47a3, #322653);
+  padding: 20px 25px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  color: #f4a261; /* Warm orange */
+}
+
+.score-display {
+  color: #e76f51; /* Soft red */
+}
+
+/* Game Container */
+.game-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #2a2d43, #414869);
+  border-radius: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  
+}
+
+/* Choices Styling */
 .choices {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin: 20px 0;
+  gap: 45px;
+  margin: 30px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #404258, #50577a);
+  border-radius: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  object-fit: contain;
+  mix-blend-mode:;
 }
 
 .choice-btn {
-  background: none;
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  object-fit: cover;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease, filter 0.3s ease;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #f72585, #7209b7);
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .choice-btn:hover {
-  transform: scale(1.2);
-}
-
-.choice-icon {
-  width: 100px;
-  height: 100px;
-}
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 24px;
-  transition: transform 0.2s ease-in-out;
-}
-
-button:hover {
   transform: scale(1.1);
+  box-shadow: 0 7px 13px rgba(209, 56, 107, 0.4);
+  filter: brightness(1.1);
 }
 
+.choice-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto;
+  mix-blend-mode: color-burn;
+}
 
-
+/* Results */
 .results {
-  margin: 20px 0;
-  font-size: 18px;
+  margin: 30px 0;
 }
 
-.scoreboard {
-  font-size: 18px;
+.bold {
   font-weight: bold;
-  margin: 20px 0;
+  color: #ffcc00; /* Gold */
 }
 
-.play-again-btn {
-  background-color: #007bff;
-  color: white;
-  font-size: 18px;
-  padding: 10px 20px;
+.result {
+  font-size: 1.7rem;
+  margin-top: 15px;
+}
+
+.win {
+  color: #06d6a0; /* Vibrant green */
+}
+
+.lose {
+  color: #ef233c; /* Bright red */
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 25px;
+}
+
+.play-again-btn,
+.reset-btn {
+  background: linear-gradient(135deg, #3a86ff, #8338ec);
   border: none;
+  padding: 17px 38px;
+  margin: 15px;
+  font-size: 1.25rem;
+  color: #ffffff;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s ease-in-out, transform 0.2s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.play-again-btn:hover {
-  background-color: #df0a0a;
+.play-again-btn:hover,
+.reset-btn:hover {
+  background: linear-gradient(135deg, #ff006e, #8338ec);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(255, 0, 102, 0.3);
+}
+
+/* Game Over */
+.game-over {
+  margin-top: 25px;
+  font-size: 2rem;
+  color: #ff6b6b; /* Soft red */
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
